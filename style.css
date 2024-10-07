@@ -80,19 +80,34 @@ h2{
     max-width: 600px;
 }
 
-textarea{
-    width: 80%;
-    border-radius: 10px;
-    color: #2c3e50;
+.dash{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.dash input{
+    font-size: 1.1em;
+    margin-left: 0;
+    max-width: 50px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-align: right;
+}
+
+.tat input{
     font-size: 1.2em;
     border: 1px solid;
-    resize: none;
-    overflow: hidden;
     margin-bottom: 20px;
     background: transparent;
     color: white;
     text-align: center;
     border: none;
+}
+
+input{
+    cursor: text;
 }
 
 .reset-btn{
