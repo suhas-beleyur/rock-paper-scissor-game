@@ -30,8 +30,34 @@
             <button id="cchoice" disabled class="result-btn"></button>
         </div>
         <div class="tat">
-            <textarea id="result" rows="4" cols="50" disabled></textarea>
+            <input type="text" class="result" id="result" disabled>
         </div>
+        <table class="dash">
+            <tr>
+                <td>
+                    <h3>Player won:</h3>
+                </td>
+                <td>
+                    <input type="text" id="pwin" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Computer won:</h3>
+                </td>
+                <td>
+                    <input type="text" id="cwin" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Ties:</h3>
+                </td>
+                <td>
+                    <input type="text" id="tie" disabled>
+                </td>
+            </tr>
+        </table>
         <button onclick="reset()" class="reset-btn">Reset</button>
     </div>
 </body>
