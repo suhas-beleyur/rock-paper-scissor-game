@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/3ec4d06084.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Let's Play</h1>
+        <h2>Rock, Paper or Scissors</h2>
+        <div class="butts">
+            <button class="inbutt" title="Rock" onclick="rock(this)">
+                <i class="fa-solid fa-hand-back-fist"></i>
+            </button>
+            <button class="inbutt" title="Paper" onclick="paper()">
+                <i class="fa-solid fa-hand"></i>
+            </button>
+            <button class="inbutt" title="Scissors" onclick="scissor()">
+                <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+        </div>
+
+        <div class="result-display">
+            <button id="pchoice" disabled class="result-btn"></button>
+            <h2>X</h2>
+            <button id="cchoice" disabled class="result-btn"></button>
+        </div>
+        <div class="tat">
+            <textarea id="result" rows="4" cols="50" disabled></textarea>
+        </div>
+        <button onclick="reset()" class="reset-btn">Reset</button>
+    </div>
+</body>
+</html>
