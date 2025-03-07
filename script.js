@@ -5,15 +5,16 @@ const resultArea = document.getElementById('result');
 let ipwin = document.getElementById('pwin');
 let icwin = document.getElementById('cwin');
 let itie = document.getElementById('tie');
+let high = document.getElementById('hscore');
 let pchoice = "";
 let cchoice = "";
 let cwin = 0, pwin = 0, tie = 0;
 ipwin.value = 0;
 icwin.value = 0;
 itie.value = 0;
+localStorage.getItem('hscore') == null ? high.value = 0 : high.value = JSON.parse(localStorage.getItem('hscore'));
 
-
-function rock(pbut) {
+function rock() {
     pbutt.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>';
     pchoice = "rock";
     computerChoice();
@@ -60,6 +61,11 @@ function showResult() {
     ) {
         result = "You win!";
         ipwin.value = ++pwin;
+        if(JSON.parse(localStorage.getItem('hscore')) < pwin){
+            localStorage.setItem('hscore', JSON.stringify(pwin));
+            high.value = pwin;
+        }
+
     } else {
         result = "Computer wins!";
         icwin.value = ++cwin;
@@ -80,3 +86,4 @@ function reset() {
     icwin.value = 0;
     itie.value = 0;
 }
+
